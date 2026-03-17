@@ -21,7 +21,7 @@
     <meta property="og:title" content="ProTools Ultra - 6 Professional Tools in One Place">
     <meta property="og:description" content="Calculate age, BMI, discounts, and more with our fast utility hub.">
     <meta property="og:image" content="https://cdn.vectorstock.com/i/1000v/03/93/initial-letter-pt-logo-template-design-vector-22790393.jpg">
-    <meta property="og:url" content="https://waqashaid55.github.io/protools/">
+    <meta property="og:url" content="https://protoolsultra.github.io/site/">
     <meta property="og:type" content="website">
 
     <link rel="icon" type="image/jpeg" href="https://cdn.vectorstock.com/i/1000v/03/93/initial-letter-pt-logo-template-design-vector-22790393.jpg">
@@ -225,13 +225,14 @@
 <footer>
     <div>&copy; 2026 ProTools Ultra | Your Personal Utility Hub</div>
     <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms & Conditions</a>
     </div>
 </footer>
 
 <script>
-    // TRACKING FUNCTION: Ye Google Analytics ko bataye ga ke kaunsa tool use hua
     function trackEvent(toolName) {
         gtag('event', 'use_tool', {
             'tool_id': toolName,
@@ -266,7 +267,6 @@
     }
 
     function countWords() {
-        // Isay auto track nahi karte warna har lafz par event jayega
         const text = document.getElementById('wordInput').value.trim();
         const words = text ? text.split(/\s+/).length : 0;
         const chars = text.length;
