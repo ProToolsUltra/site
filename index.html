@@ -16,13 +16,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>ProTools Ultra - All-In-One Smart Utility Hub</title>
-    <meta name="description" content="ProTools Ultra provides 6 premium free tools: Age Calculator, BMI Checker, Unit Converter, Word Counter, Discount Calculator, and Password Generator. Fast and easy to use.">
-    <meta name="keywords" content="Age Calculator, BMI Calculator, Word Counter, Password Generator, Discount Calculator, Unit Converter, ProTools Ultra, Online Tools">
+    <meta name="description" content="ProTools Ultra provides 15+ premium free tools: Age Calculator, BMI Checker, Currency Converter, GST Calculator, and more. Fast, secure, and easy to use.">
+    <meta name="keywords" content="Age Calculator, BMI Calculator, Word Counter, Password Generator, Discount Calculator, Unit Converter, ProTools Ultra, Online Tools, GST Calculator, Currency Converter">
     <meta name="author" content="Waqas Haider">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="ProTools Ultra - 6 Professional Tools in One Place">
-    <meta property="og:description" content="Calculate age, BMI, discounts, and more with our fast utility hub.">
+    <meta property="og:title" content="ProTools Ultra - 15+ Professional Tools in One Place">
+    <meta property="og:description" content="Calculate age, BMI, discounts, GST, and more with our fast utility hub.">
     <meta property="og:image" content="https://cdn.vectorstock.com/i/1000v/03/93/initial-letter-pt-logo-template-design-vector-22790393.jpg">
     <meta property="og:url" content="https://protoolsultra.github.io/site/">
     <meta property="og:type" content="website">
@@ -74,147 +74,192 @@
             justify-content: center;
             background: #f1f5f9;
         }
-        /* --- LOGO ALIGNMENT FIX START --- */
         .logo-img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: contain; 
-            transform: scale(1.1); 
-            display: block;
+            width: 100%; height: 100%; object-fit: contain; transform: scale(1.1); display: block;
         }
-        /* --- LOGO ALIGNMENT FIX END --- */
-        
         .logo-text { font-size: 1.35rem; font-weight: 800; color: #1e293b; }
 
         .header-center-title {
-            flex: 2;
-            text-align: center;
-            font-size: 2.1rem; 
-            font-weight: 900;
-            color: #0f172a;
-            white-space: nowrap;
-            letter-spacing: -1px;
+            flex: 2; text-align: center; font-size: 2.1rem; font-weight: 900; color: #0f172a; white-space: nowrap; letter-spacing: -1px;
         }
 
         .header-right { flex: 1; display: flex; justify-content: flex-end; }
         .header-tools-count {
-            background: #6366f1;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+            background: #6366f1; color: white; padding: 8px 16px; border-radius: 12px; font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
         }
         
-        .container { max-width: 1000px; margin: auto; padding: 0 20px; text-align: center; flex: 1; width: 100%; }
+        .container { max-width: 1300px; margin: auto; padding: 0 25px; text-align: center; flex: 1; width: 100%; }
         
-        .tagline { 
-            color: #64748b; 
-            margin: 15px auto 30px auto; 
-            font-weight: 500; 
-            font-size: 1.1rem;
-            max-width: 600px;
+        .tagline { color: #64748b; margin: 15px auto 30px auto; font-weight: 500; font-size: 1.1rem; max-width: 600px; }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
         }
 
         .tool-card {
             background: #ffffff;
             border-radius: 24px;
-            padding: 35px;
+            padding: 30px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-            margin-bottom: 25px;
             text-align: left;
             border: 1px solid #f1f5f9;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
         }
 
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.07);
-        }
+        .tool-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.07); }
 
         .icon-box {
-            width: 55px; height: 55px;
-            border-radius: 14px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.6rem; margin-bottom: 18px; color: white;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 15px; color: white; box-shadow: 0 6px 12px rgba(0,0,0,0.1);
         }
 
-        h2 { font-size: 1.5rem; margin-bottom: 15px; color: #1e293b; font-weight: 800; }
+        h2 { font-size: 1.4rem; margin-bottom: 12px; color: #1e293b; font-weight: 800; }
 
-        label { display: block; margin-bottom: 10px; font-weight: 600; color: #475569; }
-        input, textarea {
-            width: 100%; padding: 15px; border: 2px solid #e2e8f0;
-            border-radius: 14px; font-size: 1rem; margin-bottom: 20px;
-            outline: none; transition: 0.2s;
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: #475569; font-size: 0.9rem; }
+        input, textarea, select {
+            width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 0.95rem; margin-bottom: 15px; outline: none; transition: 0.2s;
         }
-        input:focus { border-color: #6366f1; }
+        input:focus { border-color: #6366f1; background: #fafbff; }
 
         .btn {
-            width: 100%; padding: 16px; border: none; border-radius: 14px;
-            color: white; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.3s;
+            width: 100%; padding: 14px; border: none; border-radius: 12px; color: white; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: 0.3s;
         }
+        .btn:active { transform: scale(0.97); }
         .btn:hover { filter: brightness(1.1); }
 
         .result {
-            margin-top: 20px; padding: 22px; border-radius: 14px;
-            font-weight: 700; display: none; text-align: center; line-height: 1.6;
+            margin-top: 15px; padding: 18px; border-radius: 12px; font-weight: 700; display: none; text-align: center; line-height: 1.5; font-size: 0.95rem; cursor: pointer; position: relative;
         }
 
         .tool-description {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #f1f5f9;
-            font-size: 0.95rem;
-            color: #64748b;
-            line-height: 1.6;
+            margin-top: 20px; padding-top: 15px; border-top: 1px solid #f1f5f9; font-size: 0.88rem; color: #64748b; line-height: 1.6;
         }
-        .tool-description h3 {
-            font-size: 1.1rem;
-            color: #1e293b;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-        .feature-list {
-            margin-top: 10px;
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-        }
-        .feature-list li {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.85rem;
-        }
+        .tool-description h3 { font-size: 1rem; color: #1e293b; margin-bottom: 6px; font-weight: 700; }
 
-        footer { 
-            background: #ffffff; color: #64748b; padding: 40px 2%; 
-            text-align: center; border-top: 1px solid #e2e8f0; margin-top: 40px;
-        }
+        footer { background: #ffffff; color: #64748b; padding: 40px 2%; text-align: center; border-top: 1px solid #e2e8f0; margin-top: 40px; }
         .footer-links { margin-top: 15px; }
         .footer-links a { color: #6366f1; text-decoration: none; margin: 0 12px; font-weight: 600; }
 
-        @media (max-width: 768px) {
-            header { padding: 0 15px; justify-content: center; }
-            .logo-text, .header-right { display: none; }
-            .header-center-title { font-size: 1.4rem; flex: 1; letter-spacing: 0; }
-            
-            .tool-card { padding: 20px; }
-            .feature-list { grid-template-columns: 1fr; }
-            
-            div[style*="display: flex; gap: 10px;"] { 
-                flex-direction: column !important; 
-                gap: 0 !important; 
-            }
-            .container { padding: 0 15px; }
-            h2 { font-size: 1.3rem; }
-        }
+        /* --- Updated Mobile Adjustments --- */
+        /* --- Final Mobile & Tablet Fix --- */
+/* --- Ultra Responsive Mobile Fix --- */
+/* --- Final Precision Mobile Fix --- */
+/* --- Optimized Precision Mobile Fix --- */
+/* --- Precision Header & Box Centering --- */
+/* --- Master Mobile Fix: Single Box & No Move --- */
+/* --- Final Combined Mobile Fix (All Problems Solved) --- */
+@media (max-width: 950px) {
+    /* 1. Website ka hilna (All-Direction Move) lock karne ke liye */
+    html, body {
+        overflow-x: hidden !important; /* Left-Right move bilkul band */
+        width: 100% !important;
+        max-width: 100vw !important; /* Screen se bahar jane se rokta hai */
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative;
+        touch-action: pan-y; /* Sirf upar-niche scroll allowed hai */
+    }
+
+    /* 2. Header Stability Fix - Fixed header ko width ke andar rakha */
+    header {
+        position: fixed !important; /* Header ko chipkaya taake site stability barhay */
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0 10px !important;
+        height: 60px !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        box-sizing: border-box !important; /* Padding ko width ke andar rakhta hai */
+        background: #ffffff; /* Background color zaroori hai fixed ke liye */
+        z-index: 1000;
+    }
+
+    .logo-area { flex: 0 0 auto !important; }
+    .logo-text { font-size: 0.8rem !important; }
+
+    .header-center-title {
+        font-size: 0.85rem !important; 
+        flex: 1 !important;
+        text-align: center !important;
+        margin: 0 5px !important;
+        white-space: nowrap !important;
+    }
+
+    .header-right { 
+        flex: 0 0 auto !important;
+        padding-right: 20px !important; 
+    }
+    .header-tools-count {
+        font-size: 0.65rem !important;
+        padding: 4px 8px !important;
+    }
+
+    /* 3. Single Box & Centering - Padding-top add ki taake header ke piche na chhupe */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 75px 0 20px 0 !important; /* Header ke liye 75px ki jagah chhori */
+        margin: 0 auto !important;
+        display: block !important; 
+        overflow-x: hidden !important;
+    }
+
+    .tools-grid {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;
+        width: 100% !important;
+        gap: 20px !important;
+        padding: 10px 0 !important;
+    }
+
+    .tool-card {
+        width: 88% !important; 
+        max-width: 350px !important;
+        margin: 0 auto !important; 
+        float: none !important; 
+        box-sizing: border-box !important;
+    }
+
+    /* --- SPECIFIC FIX: Days Counter Date Inputs --- */
+    .tool-card .input-group, 
+    .tool-card div[style*="display: flex"] {
+        display: flex !important;
+        gap: 8px !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .tool-card input[type="date"] {
+        width: 48% !important;
+        min-width: 0 !important;
+        padding: 8px 5px !important;
+        font-size: 0.8rem !important;
+        height: 40px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Global Lock: Koi bhi hidden element bahar nahi nikal sakega */
+    * {
+        box-sizing: border-box !important;
+        max-width: 100vw !important;
+    }
+}
+
+/* Mazeed choti screens ke liye extra safety */
+@media (max-width: 400px) {
+    .header-center-title { font-size: 0.75rem !important; }
+    .logo-text { display: none !important; }
+}
     </style>
 </head>
-<body>
+<body onload="startTime()">
 
 <header>
     <div class="logo-area">
@@ -223,130 +268,237 @@
         </div>
         <div class="logo-text">ProTools</div>
     </div>
-    
     <div class="header-center-title">All-In-One Utility Hub</div>
-
-    <div class="header-right">
-        <div class="header-tools-count">🚀 6 Professional Tools</div>
-    </div>
+    <div class="header-right"><div class="header-tools-count">🚀 16 Pro Tools</div></div>
 </header>
 
 <div class="container">
-    <p class="tagline">Speed up your workflow with our premium free tools.</p>
+    <p class="tagline">Speed up your workflow with our premium free tools. Professional accuracy at your fingertips.</p>
 
-    <div class="tool-card">
-        <div class="icon-box" style="background: var(--grad-1)">📅</div>
-        <h2>Age Calculator</h2>
-        <label>Select Date of Birth:</label>
-        <input type="date" id="dobInput">
-        <button class="btn" style="background: var(--grad-1)" onclick="calcAge()">Calculate Detailed Age</button>
-        <div id="ageRes" class="result" style="background:#f5f3ff; color:#5b21b6; border: 1px solid #ddd6fe;"></div>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <div class="icon-box" style="background: var(--grad-2)">⚖️</div>
+            <h2>Unit Converter</h2>
+            <label>Enter Value (KM or KG):</label>
+            <input type="number" id="unitInput" placeholder="e.g. 50">
+            <div style="display: flex; gap: 10px;">
+                <button class="btn" style="background: var(--grad-2)" onclick="calcMiles()">KM to Miles</button>
+                <button class="btn" style="background: #e11d48;" onclick="calcLbs()">KG to Pounds</button>
+            </div>
+            <div id="unitRes" class="result" style="background:#fff7ed; color:#9a3412; border: 1px solid #ffedd5;"></div>
+            <div class="tool-description">
+                <h3>Seamless Metric Conversion</h3>
+                <p>Fast and reliable unit conversion for international travel and shipping.</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="icon-box" style="background: var(--grad-1)">📅</div>
+            <h2>Age Calculator</h2>
+            <label>Select Date of Birth:</label>
+            <input type="date" id="dobInput">
+            <button class="btn" style="background: var(--grad-1)" onclick="calcAge()">Calculate Detailed Age</button>
+            <div id="ageRes" class="result" style="background:#f5f3ff; color:#5b21b6; border: 1px solid #ddd6fe;"></div>
+            <div class="tool-description">
+                <h3>Advanced Tracking</h3>
+                <p>Calculate your exact age in years, months, and days accurately.</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="icon-box" style="background: var(--grad-3)">💪</div>
+            <h2>BMI Calculator</h2>
+            <div style="display: flex; gap: 10px;">
+                <input type="number" id="bmiWeight" placeholder="Weight (KG)">
+                <input type="number" id="bmiHeight" placeholder="Height (CM)">
+            </div>
+            <button class="btn" style="background: var(--grad-3)" onclick="calcBMI()">Check Health Score</button>
+            <div id="bmiRes" class="result" style="background:#f0f9ff; color:#0369a1; border: 1px solid #e0f2fe;"></div>
+            <div class="tool-description">
+                <h3>Health Tracking</h3>
+                <p>Instantly check your BMI based on WHO standards.</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="icon-box" style="background: #0ea5e9">🕒</div>
+            <h2>Live Digital Clock</h2>
+            <div id="clockDisplay" style="font-size: 2.2rem; font-weight: 800; color: #0ea5e9; text-align: center; margin: 15px 0; letter-spacing: 2px;">00:00:00</div>
+            <div id="dateDisplay" style="text-align: center; font-weight: 600; color: #64748b; margin-bottom: 15px;">Loading Date...</div>
+            <div class="tool-description">
+                <h3>Real-Time Tracker</h3>
+                <p>Stay on top of your schedule with our precise live system clock.</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="icon-box" style="background: var(--grad-4)">📝</div>
+            <h2>Word & Character Counter</h2>
+            <label>Paste your text here:</label>
+            <textarea id="wordInput" rows="3" oninput="countWords()"></textarea>
+            <div id="wordRes" class="result" style="background:#fdf2f8; color:#9d174d; display:block; border: 1px solid #fce7f3;">Words: 0 | Chars: 0</div>
+            <div class="tool-description">
+                <h3>Text Analysis</h3>
+                <p>Track your word limit in real-time for essays and social media.</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="icon-box" style="background: #fbbf24">📊</div>
+            <h2>Percentage Calculator</h2>
+            <label>Find % of a Value:</label>
+            <div style="display: flex; gap: 10px;">
+                <input type="number" id="percP" placeholder="%">
+                <input type="number" id="percV" placeholder="Value">
+            </div>
+            <button class="btn" style="background: #f59e0b" onclick="calcPerc()">Find Percentage</button>
+            <div id="percRes" class="result" style="background:#fffbeb; color:#92400e; border: 1px solid #fef3c7;"></div>
+            <div class="tool-description">
+                <h3>Quick Calculations</h3>
+                <p>Simplify complex math. Quickly find portions of numbers.</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="icon-box" style="background: #10b981">🏛️</div>
+            <h2>GST Calculator</h2>
+            <label>Amount & Tax Rate:</label>
+            <div style="display: flex; gap: 10px;">
+                <input type="number" id="gstAmt" placeholder="Base Amount">
+                <input type="number" id="gstRate" placeholder="Tax %">
+            </div>
+            <button class="btn" style="background: #059669" onclick="calcGST()">Add GST</button>
+            <div id="gstRes" class="result" style="background:#f0fdf4; color:#065f46; border: 1px solid #dcfce7;"></div>
+            <div class="tool-description">
+                <h3>Business Utility</h3>
+                <p>Calculate GST instantly for invoices and freelancing work.</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="icon-box" style="background: #3b82f6">💵</div>
+            <h2>Currency Converter</h2>
+            <label>USD to PKR (Rate: 280):</label>
+            <input type="number" id="currInput" placeholder="Enter USD Amount">
+            <button class="btn" style="background: #2563eb" onclick="calcCurr()">Convert to PKR</button>
+            <div id="currRes" class="result" style="background:#eff6ff; color:#1e40af; border: 1px solid #dbeafe;"></div>
+            <div class="tool-description">
+                <h3>Exchange Helper</h3>
+                <p>Convert international currency rates quickly for online shopping.</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="icon-box" style="background: var(--grad-6)">🔐</div>
+            <h2>Safe Password Generator</h2>
+            <label>Password Length:</label>
+            <input type="number" id="passLength" value="12">
+            <button class="btn" style="background: var(--grad-6)" onclick="genPass()">Generate Password</button>
+            <div id="passRes" class="result" style="background:#f0fdf4; color:#166534; border: 1px solid #dcfce7; cursor: pointer;" title="Click to Copy"></div>
+            <div class="tool-description">
+                <h3>Security Protection</h3>
+                <p>Protect your online presence with randomized passwords.</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="icon-box" style="background: #000">🔗</div>
+            <h2>QR Code Generator</h2>
+            <label>Enter URL / Text:</label>
+            <input type="text" id="qrText" placeholder="https://example.com">
+            <button class="btn" style="background: #1e293b" onclick="genQR()">Generate QR Link</button>
+            <div id="qrRes" class="result" style="background:#f8fafc; color:#0f172a; border: 1px solid #e2e8f0;"></div>
+            <div class="tool-description">
+                <h3>Marketing Utility</h3>
+                <p>Create instant QR codes for your business links easily.</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="icon-box" style="background: var(--grad-5)">💰</div>
+            <h2>Discount Calculator</h2>
+            <div style="display: flex; gap: 10px;">
+                <input type="number" id="price" placeholder="Original Price">
+                <input type="number" id="discount" placeholder="Discount %">
+            </div>
+            <button class="btn" style="background: #38bdf8; color:white;" onclick="calcDiscount()">Calculate Final Price</button>
+            <div id="discountRes" class="result" style="background:#f0fdf4; color:#166534; border: 1px solid #dcfce7;"></div>
+            <div class="tool-description">
+                <h3>Shopping Savings</h3>
+                <p>Calculate seasonal sales and see exactly how much you save.</p>
+            </div>
+        </div>
         
-        <div class="tool-description">
-            <h3>Advanced Chronological Tracking</h3>
-            <p>Our Age Calculator provides a precise breakdown of your life journey. Whether you're calculating for official forms or personal curiosity, we ensure down-to-the-day accuracy.</p>
-            <ul class="feature-list">
-                <li>✅ Year/Month/Day Format</li>
-                <li>✅ Leap-year sensitive</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="tool-card">
-        <div class="icon-box" style="background: var(--grad-2)">⚖️</div>
-        <h2>Unit Converter</h2>
-        <label>Enter Value (KM or KG):</label>
-        <input type="number" id="unitInput" placeholder="e.g. 50">
-        <div style="display: flex; gap: 10px;">
-            <button class="btn" style="background: var(--grad-2)" onclick="calcMiles()">KM to Miles</button>
-            <button class="btn" style="background: #e11d48;" onclick="calcLbs()">KG to Pounds</button>
-        </div>
-        <div id="unitRes" class="result" style="background:#fff7ed; color:#9a3412; border: 1px solid #ffedd5;"></div>
-
-        <div class="tool-description">
-            <h3>Seamless Metric Conversion</h3>
-            <p>Convert distance and mass instantly. A must-have tool for travelers, shipping managers, and international students working with different measurement standards.</p>
-            <ul class="feature-list">
-                <li>✅ High precision decimals</li>
-                <li>✅ Instant calculation</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="tool-card">
-        <div class="icon-box" style="background: var(--grad-3)">💪</div>
-        <h2>BMI Calculator</h2>
-        <div style="display: flex; gap: 10px;">
-            <input type="number" id="bmiWeight" placeholder="Weight (KG)">
-            <input type="number" id="bmiHeight" placeholder="Height (CM)">
-        </div>
-        <button class="btn" style="background: var(--grad-3)" onclick="calcBMI()">Check Health Score</button>
-        <div id="bmiRes" class="result" style="background:#f0f9ff; color:#0369a1; border: 1px solid #e0f2fe;"></div>
-
-        <div class="tool-description">
-            <h3>Body Mass Index (BMI) Insights</h3>
-            <p>Your health is your wealth. Use our BMI tracker to determine if your weight is in a healthy proportion to your height based on global health standards.</p>
-            <ul class="feature-list">
-                <li>✅ Standard WHO Logic</li>
-                <li>✅ Weight Goal Support</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="tool-card">
-        <div class="icon-box" style="background: var(--grad-4)">📝</div>
-        <h2>Word & Character Counter</h2>
-        <label>Paste your text here:</label>
-        <textarea id="wordInput" rows="4" oninput="countWords()"></textarea>
-        <div id="wordRes" class="result" style="background:#fdf2f8; color:#9d174d; display:block; border: 1px solid #fce7f3;">
-            Words: 0 | Characters: 0
+        <div class="tool-card">
+            <div class="icon-box" style="background: #ec4899">🎙️</div>
+            <h2>Text to Speech</h2>
+            <label>Enter Message to Speak:</label>
+            <input type="text" id="ttsInput" placeholder="Hello, welcome">
+            <button class="btn" style="background: #db2777" onclick="playTTS()">Speak Now</button>
+            <div class="tool-description">
+                <h3>Voice Accessibility</h3>
+                <p>Turn any written text into audible speech instantly.</p>
+            </div>
         </div>
 
-        <div class="tool-description">
-            <h3>Professional Text Analysis</h3>
-            <p>Ensure your content fits within social media limits or academic requirements. Our tool analyzes your text in real-time as you type or paste.</p>
-            <ul class="feature-list">
-                <li>✅ Real-time word count</li>
-                <li>✅ Spaces included</li>
-            </ul>
+        <div class="tool-card">
+            <div class="icon-box" style="background: #6366f1">🎲</div>
+            <h2>Random Number Generator</h2>
+            <label>Range (Min to Max):</label>
+            <div style="display: flex; gap: 10px;">
+                <input type="number" id="randMin" value="1">
+                <input type="number" id="randMax" value="100">
+            </div>
+            <button class="btn" style="background: #4f46e5" onclick="genRand()">Generate Number</button>
+            <div id="randRes" class="result" style="background:#eef2ff; color:#3730a3; border: 1px solid #c7d2fe;"></div>
+            <div class="tool-description">
+                <h3>Decision Making</h3>
+                <p>Generate random numbers for giveaways or games.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="tool-card">
-        <div class="icon-box" style="background: var(--grad-5)">💰</div>
-        <h2>Discount Calculator</h2>
-        <div style="display: flex; gap: 10px;">
-            <input type="number" id="price" placeholder="Original Price">
-            <input type="number" id="discount" placeholder="Discount %">
+        <div class="tool-card">
+            <div class="icon-box" style="background: #14b8a6">⏳</div>
+            <h2>Days Counter</h2>
+            <div style="display: flex; gap: 10px;">
+                <input type="date" id="dateStart">
+                <input type="date" id="dateEnd">
+            </div>
+            <button class="btn" style="background: #0d9488" onclick="calcDaysDiff()">Calculate Difference</button>
+            <div id="daysRes" class="result" style="background:#f0fdfa; color:#0f766e; border: 1px solid #ccfbf1;"></div>
+            <div class="tool-description">
+                <h3>Deadline Planner</h3>
+                <p>Count the total days between two dates for projects.</p>
+            </div>
         </div>
-        <button class="btn" style="background: #38bdf8; color:white;" onclick="calcDiscount()">Calculate Final Price</button>
-        <div id="discountRes" class="result" style="background:#f0fdf4; color:#166534; border: 1px solid #dcfce7;"></div>
 
-        <div class="tool-description">
-            <h3>Smart Financial Calculations</h3>
-            <p>Don't let sales confuse you. Instantly calculate exactly how much you save and what the final price tag will be during seasonal promotions.</p>
-            <ul class="feature-list">
-                <li>✅ Shows total savings</li>
-                <li>✅ Error-free shopping</li>
-            </ul>
+        <div class="tool-card">
+            <div class="icon-box" style="background: #f43f5e">🏠</div>
+            <h2>EMI Calculator</h2>
+            <div style="display: flex; gap: 5px; flex-direction: column;">
+                <input type="number" id="loanAmt" placeholder="Loan Amount">
+                <input type="number" id="loanInt" placeholder="Interest Rate %">
+                <input type="number" id="loanTime" placeholder="Months">
+            </div>
+            <button class="btn" style="background: #e11d48" onclick="calcEMI()">Calculate EMI</button>
+            <div id="emiRes" class="result" style="background:#fff1f2; color:#9f1239; border: 1px solid #ffe4e6;"></div>
+            <div class="tool-description">
+                <h3>Loan Planner</h3>
+                <p>Plan monthly installments for car or home loans easily.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="tool-card">
-        <div class="icon-box" style="background: var(--grad-6)">🔐</div>
-        <h2>Safe Password Generator</h2>
-        <label>Password Length:</label>
-        <input type="number" id="passLength" value="12">
-        <button class="btn" style="background: var(--grad-6)" onclick="genPass()">Generate Secure Password</button>
-        <div id="passRes" class="result" style="background:#f0fdf4; color:#166534; border: 1px solid #dcfce7;"></div>
-
-        <div class="tool-description">
-            <h3>Cyber Security Protection</h3>
-            <p>Generate high-entropy, complex passwords to protect your online accounts. Our tool uses randomized logic to ensure maximum security against hackers.</p>
-            <ul class="feature-list">
-                <li>✅ No data logged</li>
-                <li>✅ Fully randomized</li>
-            </ul>
+        <div class="tool-card">
+            <div class="icon-box" style="background: #8b5cf6">⏰</div>
+            <h2>Life in Days</h2>
+            <label>Select Your Birthday:</label>
+            <input type="date" id="dobDays">
+            <button class="btn" style="background: #7c3aed" onclick="calcLifeDays()">Show Total Days</button>
+            <div id="lifeRes" class="result" style="background:#f5f3ff; color:#5b21b6; border: 1px solid #ddd6fe;"></div>
+            <div class="tool-description">
+                <h3>Fun Facts Utility</h3>
+                <p>Discover exactly how many days you have lived so far.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -362,83 +514,71 @@
 </footer>
 
 <script>
-    function trackEvent(toolName) {
-        gtag('event', 'use_tool', { 'tool_id': toolName, 'event_category': 'Engagement' });
-    }
+    function trackEvent(t){ if(typeof gtag === 'function') { gtag('event','use_tool',{'tool_id':t,'event_category':'Engagement'}); } }
 
-    function calcAge() {
-        trackEvent('age_calculator');
-        const birthDate = new Date(document.getElementById('dobInput').value);
-        if(!birthDate.getTime()) return alert("Select Date!");
+    function startTime() {
         const today = new Date();
-        let years = today.getFullYear() - birthDate.getFullYear();
-        let months = today.getMonth() - birthDate.getMonth();
-        let days = today.getDate() - birthDate.getDate();
-        if (days < 0) { months--; days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); }
-        if (months < 0) { years--; months += 12; }
-        const out = document.getElementById('ageRes');
-        out.innerHTML = `✨ Age: <strong>${years}Y, ${months}M, ${days}D</strong>`;
-        out.style.display = "block";
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clockDisplay').innerHTML = h + ":" + m + ":" + s;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('dateDisplay').innerHTML = today.toLocaleDateString(undefined, options);
+        setTimeout(startTime, 1000);
+    }
+    function checkTime(i) { if (i < 10) {i = "0" + i}; return i; }
+
+    function calcAge(){
+        trackEvent('age_calculator');
+        const d = new Date(document.getElementById('dobInput').value);
+        if(!d.getTime()) return;
+        const n = new Date();
+        let y = n.getFullYear()-d.getFullYear(), m = n.getMonth()-d.getMonth(), day = n.getDate()-d.getDate();
+        if(day<0){ m--; day+=new Date(n.getFullYear(),n.getMonth(),0).getDate(); }
+        if(m<0){ y--; m+=12; }
+        const o=document.getElementById('ageRes'); o.innerHTML=`✨ Age: <strong>${y}Y, ${m}M, ${day}D</strong>`; o.style.display="block";
     }
 
-    function calcBMI() {
+    function calcBMI(){
         trackEvent('bmi_calculator');
-        const w = document.getElementById('bmiWeight').value;
-        const h = document.getElementById('bmiHeight').value / 100;
-        if(!w || !h) return;
-        const bmi = (w / (h * h)).toFixed(1);
-        const out = document.getElementById('bmiRes');
-        out.innerHTML = `🥗 BMI: <strong>${bmi}</strong>`;
-        out.style.display = "block";
+        const w=document.getElementById('bmiWeight').value, h=document.getElementById('bmiHeight').value/100;
+        if(!w || !h) return; const bmi=(w/(h*h)).toFixed(1);
+        const o=document.getElementById('bmiRes'); o.innerHTML=`🥗 BMI Score: <strong>${bmi}</strong>`; o.style.display="block";
     }
 
-    function countWords() {
-        const text = document.getElementById('wordInput').value.trim();
-        const words = text ? text.split(/\s+/).length : 0;
-        const chars = text.length;
-        document.getElementById('wordRes').innerHTML = `Words: ${words} | Characters: ${chars}`;
+    function countWords(){
+        const t=document.getElementById('wordInput').value.trim();
+        const w=t?t.split(/\s+/).length:0, c=t.length;
+        document.getElementById('wordRes').innerHTML=`Words: ${w} | Chars: ${c}`;
     }
 
-    function calcDiscount() {
+    function calcDiscount(){
         trackEvent('discount_calculator');
-        const p = document.getElementById('price').value;
-        const d = document.getElementById('discount').value;
-        if(!p || !d) return;
-        const saved = (p * d / 100).toFixed(2);
-        const final = (p - saved).toFixed(2);
-        const out = document.getElementById('discountRes');
-        out.innerHTML = `💸 Final Price: <strong>${final}</strong> (Saved: ${saved})`;
-        out.style.display = "block";
+        const p=document.getElementById('price').value, d=document.getElementById('discount').value;
+        if(!p || !d) return; const s=(p*d/100).toFixed(2);
+        const o=document.getElementById('discountRes'); o.innerHTML=`💸 Price: <strong>${(p-s).toFixed(2)}</strong> (Saved: ${s})`; o.style.display="block";
     }
 
-    function genPass() {
+    function genPass(){
         trackEvent('password_generator');
-        const len = document.getElementById('passLength').value;
-        const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
-        let res = "";
-        for (let i = 0; i < len; ++i) res += charset.charAt(Math.floor(Math.random() * charset.length));
-        const out = document.getElementById('passRes');
-        out.innerHTML = `🛡️ <strong>${res}</strong>`;
-        out.style.display = "block";
+        const l=document.getElementById('passLength').value, c="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+        let r=""; for(let i=0;i<l;++i) r+=c.charAt(Math.floor(Math.random()*c.length));
+        const o=document.getElementById('passRes'); o.innerHTML=`🛡️ <strong>${r}</strong>`; o.style.display="block";
     }
 
-    function calcMiles() {
-        trackEvent('unit_converter_miles');
-        const val = document.getElementById('unitInput').value;
-        const res = (val * 0.621).toFixed(2);
-        const out = document.getElementById('unitRes');
-        out.innerHTML = `🚀 ${val} KM = <strong>${res} Miles</strong>`;
-        out.style.display = "block";
-    }
-
-    function calcLbs() {
-        trackEvent('unit_converter_lbs');
-        const val = document.getElementById('unitInput').value;
-        const res = (val * 2.204).toFixed(2);
-        const out = document.getElementById('unitRes');
-        out.innerHTML = `⚖️ ${val} KG = <strong>${res} Lbs</strong>`;
-        out.style.display = "block";
-    }
+    function calcMiles(){ const v=document.getElementById('unitInput').value; if(!v) return; const o=document.getElementById('unitRes'); o.innerHTML=`🚀 ${v} KM = <strong>${(v*0.621).toFixed(2)} Miles</strong>`; o.style.display="block"; }
+    function calcLbs(){ const v=document.getElementById('unitInput').value; if(!v) return; const o=document.getElementById('unitRes'); o.innerHTML=`⚖️ ${v} KG = <strong>${(v*2.204).toFixed(2)} Lbs</strong>`; o.style.display="block"; }
+    function calcPerc(){ const p=document.getElementById('percP').value, v=document.getElementById('percV').value; if(!p || !v) return; const o=document.getElementById('percRes'); o.innerHTML=`📊 Answer: <strong>${(v*p/100).toFixed(2)}</strong>`; o.style.display="block"; }
+    function calcGST(){ const a=document.getElementById('gstAmt').value, r=document.getElementById('gstRate').value; if(!a || !r) return; const tax=(a*r/100).toFixed(2); const o=document.getElementById('gstRes'); o.innerHTML=`🏛️ Total: <strong>${(parseFloat(a)+parseFloat(tax)).toFixed(2)}</strong> (Tax: ${tax})`; o.style.display="block"; }
+    function calcCurr(){ const v=document.getElementById('currInput').value; if(!v) return; const o=document.getElementById('currRes'); o.innerHTML=`💵 Total: <strong>Rs. ${v*280}</strong> (Rate: 280)`; o.style.display="block"; }
+    function genQR(){ const t=document.getElementById('qrText').value; if(!t) return; const o=document.getElementById('qrRes'); o.innerHTML=`🔗 Link ready: <strong>${t}</strong><br><small>Ready to Scan</small>`; o.style.display="block"; }
+    function playTTS(){ const t=document.getElementById('ttsInput').value; if(!t)return; let u=new SpeechSynthesisUtterance(t); window.speechSynthesis.speak(u); }
+    function genRand(){ const min=parseInt(document.getElementById('randMin').value), max=parseInt(document.getElementById('randMax').value); if(isNaN(min) || isNaN(max)) return; const res=Math.floor(Math.random()*(max-min+1))+min; const o=document.getElementById('randRes'); o.innerHTML=`🎲 Result: <strong>${res}</strong>`; o.style.display="block"; }
+    function calcDaysDiff(){ const s=new Date(document.getElementById('dateStart').value), e=new Date(document.getElementById('dateEnd').value); if(!s.getTime() || !e.getTime()) return; const diff=Math.abs(e-s)/(1000*60*60*24); const o=document.getElementById('daysRes'); o.innerHTML=`⏳ Difference: <strong>${diff} Days</strong>`; o.style.display="block"; }
+    function calcEMI(){ const p=document.getElementById('loanAmt').value, r=document.getElementById('loanInt').value/12/100, n=document.getElementById('loanTime').value; if(!p || !r || !n) return; const emi=(p*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1); const o=document.getElementById('emiRes'); o.innerHTML=`🏠 Monthly EMI: <strong>${emi.toFixed(2)}</strong>`; o.style.display="block"; }
+    function calcLifeDays(){ const d=new Date(document.getElementById('dobDays').value), n=new Date(); if(!d.getTime()) return; const diff=Math.floor((n-d)/(1000*60*60*24)); const o=document.getElementById('lifeRes'); o.innerHTML=`⏰ Total Days Lived: <strong>${diff}</strong>`; o.style.display="block"; }
 </script>
 
 </body>
